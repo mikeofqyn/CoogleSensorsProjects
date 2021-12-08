@@ -1,4 +1,4 @@
-///////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 // Send temperature data to an MQTT broker using CoogleSensor lib.
 // Temperature is read from multiple DS18B20 sensors
 // See CoogleSensor's README.md for documentation
@@ -37,7 +37,7 @@ CoogleSensors CS(Tty);
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define MEASUREMENT_NAME  "HEATER" 
+#define MEASUREMENT_NAME  "DS18B20" 
 
 // Data wire is plugged into digital pin 2 on the Arduino
 #define ONE_WIRE_BUS 2
@@ -71,12 +71,12 @@ int deviceCount = 0;
 void setup()
 {
     // CoogleSensors library
-
+ 
     CS.begin();
 
 	  last_telnet_check = millis();
 
-    // DHT
+    // DS18B20
 
     sensors.begin();  // Start up the library
     deviceCount = sensors.getDeviceCount();

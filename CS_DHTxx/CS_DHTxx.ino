@@ -36,9 +36,12 @@ CoogleSensors CS(Tty);
 
 #define SENSOR_TYPE DHT22    // DHT11 or DHT22
                              // FOR DHT22 A 19K PULL-UP BETWEEN DATA PIN AND VCC IS NEEDED
+
+#define MEASUREMENT_NAME  "DHT22"  // Match SENSOR_TYPE (can't stringify)
+
+                             
 #define DHT_SENSOR_PIN 2     // DHT SENSOR DATA PIN IN GPIO2
                              
-#define MEASUREMENT_NAME  "DHT22" 
                           
 DHT dht(DHT_SENSOR_PIN, SENSOR_TYPE) ;
 
